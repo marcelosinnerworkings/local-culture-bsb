@@ -12,8 +12,6 @@ CREATE TABLE "public.institution" (
   OIDS=FALSE
 );
 
-
-
 CREATE TABLE "public.person" (
 	"person_id" serial NOT NULL,
 	"person_name" varchar(255) NOT NULL,
@@ -22,8 +20,6 @@ CREATE TABLE "public.person" (
 ) WITH (
   OIDS=FALSE
 );
-
-
 
 CREATE TABLE "public.comment" (
 	"comm_id" serial NOT NULL,
@@ -35,9 +31,5 @@ CREATE TABLE "public.comment" (
   OIDS=FALSE
 );
 
-
-
-
-
-ALTER TABLE "comment" ADD CONSTRAINT "comment_fk0" FOREIGN KEY ("inst_id_fk") REFERENCES "institution"("inst_id");
-ALTER TABLE "comment" ADD CONSTRAINT "comment_fk1" FOREIGN KEY ("person_id_fk") REFERENCES "person"("person_id");
+ALTER TABLE "public.comment" ADD CONSTRAINT "comment_fk0" FOREIGN KEY ("inst_id_fk") REFERENCES "public.institution"("inst_id");
+ALTER TABLE "public.comment" ADD CONSTRAINT "comment_fk1" FOREIGN KEY ("person_id_fk") REFERENCES "public.person"("person_id");

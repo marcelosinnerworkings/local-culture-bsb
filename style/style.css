@@ -1,0 +1,25 @@
+body {
+  font-family: "Puritan", sans-serif;
+}
+
+header {
+  background: green;
+  padding: 20px 0;
+}
+
+footer {
+  background: violet;
+  padding: 20px 0;
+}
+
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-align: left;
+}
+
+div {
+  background: red;
+}
+

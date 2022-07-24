@@ -1,2 +1,2 @@
-.env
 /template
+/db/connectiondata.php

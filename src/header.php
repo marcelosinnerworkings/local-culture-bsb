@@ -1,4 +1,6 @@
-
+<style>
+  <?php include 'style/style.css'; ?>
+</style>
     <header>
       <div class="navigation">
         <nav>

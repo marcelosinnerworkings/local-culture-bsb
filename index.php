@@ -10,23 +10,7 @@
     <title>Brasilia - Brazil</title>
   </head>
   <body>
-  <?php
-    $dotenvFile = __DIR__ . '/.env';
-    if (file_exists($dotenvFile)) {
-        $lines = file($dotenvFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-        foreach ($lines as $line) {
-            if (strpos($line, '=') !== false) {
-                list($key, $value) = explode('=', $line, 2);
-                $_ENV[$key] = $value;
-                $_SERVER[$key] = $value;
-            }
-        }
-    }
-    $dbHost = $_ENV['DB_HOST'];
-    $dbName = $_ENV['DB_NAME'];
-    $dbUser = $_ENV['DB_USER'];
-    $dbPass = $_ENV['DB_PASS'];   
-    ?>
+    <!-- If you want to connect another database, remember to uncomment inside the attractions.php file -->
     <?php include 'src/header.php';?>
     <?php include 'src/map.php';?>
     <?php include 'src/attractions.php';?>
